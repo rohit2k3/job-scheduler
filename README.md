@@ -20,7 +20,7 @@ A production-ready job import system with queue-based background processing, cap
 ### 1. Backend Setup
 
 ```bash
-cd job-task-backend
+cd server
 
 # Install dependencies
 npm install
@@ -47,7 +47,7 @@ npm run worker
 ### 3. Frontend Setup
 
 ```bash
-cd job-task-frontend
+cd client
 
 # Install dependencies
 npm install
@@ -63,7 +63,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 📁 Project Structure
 
 ```
-├── job-task-backend/
+├── server/
 │   ├── src/
 │   │   ├── config/         # Database, Redis, environment
 │   │   ├── controllers/    # API route handlers
@@ -76,7 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 │   ├── index.js            # API server entry
 │   └── worker.js           # Worker process entry
 │
-├── job-task-frontend/
+├── client/
 │   ├── app/                # Next.js pages
 │   ├── components/         # React components
 │   ├── lib/                # API client
@@ -139,15 +139,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 6. **Import Logs** track statistics for each run
 7. **Dashboard** displays real-time status
 
-## 🐳 Docker (Optional)
-
-```bash
-# Start Redis
-docker run -d -p 6379:6379 redis:alpine
-
-# Start MongoDB
-docker run -d -p 27017:27017 mongo:latest
-```
 
 ## 📊 Job Sources
 
